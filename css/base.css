@@ -1,0 +1,23 @@
+:root {
+    --primary: #bc9667;
+    --dark: #1a1a1a;
+    --text-main: #222;
+    --text-muted: #777;
+    --bg-light: #f9f4ef;
+    --white: #ffffff;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    line-height: 1.7;
+    background-color: var(--white);
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 100px 0; }
+.text-center { text-align: center; }

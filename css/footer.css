@@ -1,0 +1,161 @@
+/* ==========================================================================
+   FOOTER STYLES (Simalu Premium Compact & Large Logo)
+   ========================================================================== */
+#main-footer {
+    background-color: #1a1a1a; 
+    color: #f4f4f4;
+    padding: 60px 0 0; /* Padding atas dikurangi, bawah 0 karena ada footer-bottom */
+    border-top: none;
+    font-family: var(--font-sans);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px; /* Jarak antar kolom lebih rapat */
+    padding-bottom: 50px; /* Jarak grid ke garis bawah dikurangi */
+}
+
+/* LOGO: Besar, Dominan, dan Rapat */
+.footer-logo {
+    height: 150px; /* Ukuran besar dan tegas */
+    width: auto;
+    margin-bottom: 15px; /* Spasi bawah dipersempit agar teks langsung mengikuti */
+    display: block;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.03);
+}
+
+.footer-col.branding p {
+    max-width: 320px;
+    line-height: 1.6; /* Line height dirapatkan agar lebih solid */
+    color: #adadad;
+    font-size: 0.9rem;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 20px; /* Spasi judul lebih rapat */
+    position: relative;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px; 
+    height: 2px;
+    background-color: var(--primary); 
+}
+
+/* LIST JAM BUKA: Lebih Efisien */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 10px; /* Jarak antar baris dikurangi */
+    color: #adadad;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 6px;
+    transition: 0.3s ease;
+}
+
+.footer-col ul li:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.footer-col ul li span:last-child {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* CONTACT INFO */
+.footer-col.contact p {
+    margin-bottom: 8px; /* Spasi antar info kontak dirapatkan */
+    font-size: 0.85rem;
+}
+
+/* SOCIAL ICONS: Minimalis */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    opacity: 0.5;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* COPYRIGHT BOTTOM */
+.footer-bottom {
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #262626;
+    background-color: #111111;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: #555555;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    #main-footer { padding-top: 50px; }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .footer-logo {
+        height: 120px; /* Sedikit menyesuaikan di mobile */
+        margin: 0 auto 15px;
+    }
+
+    .footer-col.branding p { margin: 0 auto; }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons { justify-content: center; }
+
+    .footer-col ul li {
+        max-width: 350px;
+        margin: 0 auto 8px;
+    }
+}
