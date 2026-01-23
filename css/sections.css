@@ -791,3 +791,24 @@
         transform: scale(0.98);
     }
 }
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Smartphone (max-width: 450px) */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%; /* Mengecilkan ukuran font dasar agar elemen muat */
+    }
+    .menu-card {
+        width: 100%; /* Kartu menu memenuhi layar */
+    }
+}
