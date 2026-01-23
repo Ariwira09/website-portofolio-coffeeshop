@@ -791,3 +791,36 @@
         transform: scale(0.98);
     }
 }
+
+/* --- Penyesuaian Tombol Mobile (Lebih Kecil & Center) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Memastikan container hero berada di tengah */
+    .hero-content {
+        padding-left: 0;        /* Menghapus padding 10% agar bisa center sempurna */
+        text-align: center;     /* Meratakan teks ke tengah */
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    /* Menarik tombol ke tengah */
+    }
+
+    /* 2. Memperkecil tombol agar sesuai teks */
+    .hero-content .btn,
+    .btn-hero-style {
+        display: inline-block;  /* Kunci: tombol tidak lagi selebar layar */
+        width: auto;            /* Ukuran mengikuti lebar teks */
+        min-width: 180px;       /* Ukuran minimal agar tetap nyaman ditekan */
+        padding: 12px 25px;     /* Padding diperkecil agar lebih ramping */
+        margin: 10px auto 0;    /* Center secara horizontal dengan margin auto */
+        font-size: 0.85rem;     /* Ukuran font sedikit diperkecil */
+        text-align: center;
+    }
+
+    /* 3. Menyesuaikan Heading agar center di HP */
+    .hero-content h1 {
+        font-size: 2.2rem;      /* Ukuran judul disesuaikan untuk HP */
+        margin-bottom: 15px;
+    }
+}
